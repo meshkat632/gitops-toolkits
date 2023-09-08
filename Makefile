@@ -5,7 +5,7 @@ BUILD_TIME := $(shell date '+%Y%m%d%H%M%S')
 build:
 	ncc build index.js --license licenses.txt
 
-release:
+release: build
 	echo "release"
 	echo "$(BUILD_TIME)" >> release_time.txt
 	git add .

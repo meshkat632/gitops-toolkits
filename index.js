@@ -5,9 +5,11 @@ try {
     // `who-to-greet` input defined in action metadata file
     const nameToGreet = core.getInput('who-to-greet');
     const targetRepo = core.getInput('targetRepo');
+    const tagName = core.getInput('tagName');
     const sourceRepo = core.getInput('sourceRepo');
     console.log(`Hello ${nameToGreet}!`);
     console.log(`targetRepo: ${targetRepo}!`);
+    console.log(`tagName: ${tagName}!`);
     console.log(`sourceRepo: ${sourceRepo}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
