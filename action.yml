@@ -5,6 +5,15 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  tagName:
+    description: 'tagName'
+    required: true
+  targetRepo:
+    description: 'targetRepo'
+    required: true
+  sourceRepo:
+    description: 'sourceRepo'
+    required: true
 outputs:
   time: # id of output
     description: 'The time we greeted you'
