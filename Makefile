@@ -2,6 +2,9 @@
 
 BUILD_TIME := $(shell date '+%Y%m%d%H%M%S')
 
+build:
+	ncc build index.js --license licenses.txt
+
 release:
 	echo "release"
 	echo "$(BUILD_TIME)" >> release_time.txt
