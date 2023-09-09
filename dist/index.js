@@ -15310,7 +15310,7 @@ try {
         console.log("Output: \n", output)
     })
 
-    exec(`git checkout ${targetRepo}`, (err, output) => {
+    exec(`git checkout deployments/env-DEV`, (err, output) => {
         // once the command has completed, the callback function is called
         if (err) {
             // log and return if we encounter an error
