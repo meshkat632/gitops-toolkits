@@ -9839,7 +9839,15 @@ const exec = (cmd, args=[]) => new Promise((resolve, reject) => {
 
 const main = async (args) => {
     console.log(JSON.stringify(args));
-    await exec('bash', [__nccwpck_require__.ab + "deploy.sh", "--bucketname","olabucket"]);
+    await exec('bash', [path.join(__dirname, "./deploy.sh"),
+        "--tagName",args.tagName,
+        "--sourceRepo",args.sourceRepo,
+        "--sourceBranch",args.sourceBranch,
+        "--targetRepo",args.targetRepo,
+        "--targetBranch",args.targetBranch,
+        "--GITHUB_TOKEN",args.GITHUB_TOKEN,
+        "--GITHUB_USER",args.GITHUB_USER,
+    ]);
 };
 
 
