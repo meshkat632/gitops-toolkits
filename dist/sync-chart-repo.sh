@@ -39,3 +39,6 @@ cd "temp-$BUILD_TIME/targetRepo"
 git status
 ls -ltr
 cat argocd/environments/dev/vvc-portal/values.yaml
+./scripts/sops-utils.sh decryptFile argocd/environments/dev/vvc-portal/values.yaml
+cat argocd/environments/dev/vvc-portal/values.yaml
+echo "################################################################################################################"
