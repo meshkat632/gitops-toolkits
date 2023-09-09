@@ -47,3 +47,6 @@ cat argocd/environments/dev/vvc-portal/values.yaml
 yq -i e ".vvc-portal.commitSha = \"$tagName\"" argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
 echo "################################################################################################################"
+./scripts/sops-utils.sh encryptFile argocd/environments/dev/vvc-portal/values.yaml
+cat argocd/environments/dev/vvc-portal/values.yaml
+echo "################################################################################################################"
