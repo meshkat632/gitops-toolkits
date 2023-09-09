@@ -44,4 +44,8 @@ cat argocd/environments/dev/vvc-portal/values.yaml
 #export SOPS_AGE_KEY=$SOPS_AGE_KEY
 ./scripts/sops-utils.sh decryptFile argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
+
+
+yq -i e '.vvc-portal.portal.imageTag = vvc-portal-ui:d099bb7-20230712-104112' argocd/environments/dev/vvc-portal/values.yaml
+cat argocd/environments/dev/vvc-portal/values.yaml
 echo "################################################################################################################"
