@@ -18,6 +18,7 @@ targetRepo=${args[targetRepo]}
 targetBranch=${args[targetBranch]}
 GITHUB_TOKEN=${args[GITHUB_TOKEN]}
 GITHUB_USER=${args[GITHUB_USER]}
+SOPS_AGE_KEY=${args[SOPS_AGE_KEY]}
 
 
 echo "tagName: $tagName"
@@ -27,6 +28,7 @@ echo "targetRepo: $targetRepo"
 echo "targetBranch: $targetBranch"
 echo "GITHUB_TOKEN: $GITHUB_TOKEN"
 echo "GITHUB_USER: $GITHUB_USER"
+echo "SOPS_AGE_KEY: $SOPS_AGE_KEY"
 
 echo "################################################################################################################"
 mkdir -p "temp-$BUILD_TIME"
