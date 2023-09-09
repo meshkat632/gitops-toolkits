@@ -31,9 +31,11 @@ echo "GITHUB_USER: $GITHUB_USER"
 echo "################################################################################################################"
 mkdir -p "temp-$BUILD_TIME"
 
-git clone --branch deployments/env-DEV https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$sourceRepo "temp-$BUILD_TIME/sourceRepo"
-cd "temp-$BUILD_TIME/sourceRepo"
+git clone --branch $targetBranch https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
+cd "temp-$BUILD_TIME/targetRepo"
 ls -ltr
+git diff $targetBranch origin/$sourceBranch --color > diff.txt
+cat diff.txt
 cd ..
 echo "################################################################################################################"
 #git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
