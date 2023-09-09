@@ -34,14 +34,12 @@ mkdir -p "temp-$BUILD_TIME"
 git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$sourceRepo "temp-$BUILD_TIME/sourceRepo"
 cd temp-$BUILD_TIME/sourceRepo
 ls -ltr
-
+cd ..
 echo "################################################################################################################"
-
-
-
-#git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
-#cd temp-$BUILD_TIME/targetRepo
-#ls -ltr
+git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
+cd temp-$BUILD_TIME/targetRepo
+ls -ltr
+echo "################################################################################################################"
 #git clone --branch master https://github.com/ververica/vvc-portal "temp-$BUILD_TIME/vvc-portal-master"
 
 
