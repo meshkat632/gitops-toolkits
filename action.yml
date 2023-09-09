@@ -22,9 +22,6 @@ inputs:
   GITHUB_USER:
     description: 'GITHUB_USER'
     required: true
-#  SOPS_AGE_KEY:
-#    description: 'SOPS_AGE_KEY'
-#    required: true
 outputs:
   time: # id of output
     description: 'The time we greeted you'
