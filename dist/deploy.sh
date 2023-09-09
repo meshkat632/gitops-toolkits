@@ -32,7 +32,7 @@ echo "##########################################################################
 mkdir -p "temp-$BUILD_TIME"
 
 git clone --branch deployments/env-DEV https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$sourceRepo "temp-$BUILD_TIME/sourceRepo"
-cd temp-$BUILD_TIME/sourceRepo
+cd "temp-$BUILD_TIME/sourceRepo"
 ls -ltr
 cd ..
 echo "################################################################################################################"
