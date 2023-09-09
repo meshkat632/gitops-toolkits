@@ -20,7 +20,7 @@ const exec = (cmd, args=[]) => new Promise((resolve, reject) => {
 });
 
 const main = async (args) => {
-    console.log(JOSN.stringify(args));
+    console.log(JSON.stringify(args));
     await exec('bash', [path.join(__dirname, "./deploy.sh"), "--bucketname","olabucket"]);
 };
 

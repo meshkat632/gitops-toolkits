@@ -9838,7 +9838,7 @@ const exec = (cmd, args=[]) => new Promise((resolve, reject) => {
 });
 
 const main = async (args) => {
-    console.log(JOSN.stringify(args));
+    console.log(JSON.stringify(args));
     await exec('bash', [__nccwpck_require__.ab + "deploy.sh", "--bucketname","olabucket"]);
 };
 
