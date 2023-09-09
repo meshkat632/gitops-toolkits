@@ -46,6 +46,6 @@ cat argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
 
 
-yq -i e '.vvc-portal.portal.imageTag = vvc-portal-ui:d099bb7-20230712-104112' argocd/environments/dev/vvc-portal/values.yaml
+yq -i e '.vvc-portal.portal.imageTag = vvc-portal-ui:bumlux' argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
 echo "################################################################################################################"
