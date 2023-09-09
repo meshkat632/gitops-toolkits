@@ -36,6 +36,8 @@ mkdir -p "temp-$BUILD_TIME"
 #git status
 #ls -ltr
 
+git config --global user.name "Meshkatul Anwer"
+git config --global user.email "meshkatul@ververica.com"
 git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/ververica/vvc-portal-ui-chart "temp-$BUILD_TIME/targetRepo"
 cd "temp-$BUILD_TIME/targetRepo"
 git status
