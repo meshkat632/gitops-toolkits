@@ -9835,16 +9835,21 @@ const main = async () => {
 
 
 try {
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
-    const targetRepo = core.getInput('targetRepo');
     const tagName = core.getInput('tagName');
     const sourceRepo = core.getInput('sourceRepo');
-    console.log(`Hello ${nameToGreet}!`);
+    const sourceBranch = core.getInput('sourceBranch');
+    const targetRepo = core.getInput('targetRepo');
+    const targetBranch = core.getInput('targetBranch');
+    const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
+    const GITHUB_USER = core.getInput('GITHUB_USER');
+
+    console.log(`tagName: ${tagName}!`);
+    console.log(`sourceRepo: ${sourceRepo}!`);
+    console.log(`sourceBranch: ${sourceBranch}!`);
     console.log(`targetRepo: ${targetRepo}!`);
-    console.log(`gitrepoName: ${gitrepoName}!`);
     console.log(`targetBranch: ${targetBranch}!`);
-    console.log(`targetBranch: ${targetBranch}!`);
+    console.log(`GITHUB_TOKEN: ${GITHUB_TOKEN}!`);
+    console.log(`GITHUB_USER: ${GITHUB_USER}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
     // Get the JSON webhook payload for the event that triggered the workflow
