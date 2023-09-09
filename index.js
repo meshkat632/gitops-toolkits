@@ -19,7 +19,8 @@ const exec = (cmd, args=[]) => new Promise((resolve, reject) => {
     app.on('error', reject);
 });
 
-const main = async () => {
+const main = async (args) => {
+    console.log(JOSN.stringify(args));
     await exec('bash', [path.join(__dirname, "./deploy.sh"), "--bucketname","olabucket"]);
 };
 
@@ -45,7 +46,15 @@ try {
     // Get the JSON webhook payload for the event that triggered the workflow
     const payload = JSON.stringify(github.context.payload, undefined, 2)
 
-    main().catch(err => {
+    main({
+        tagName,
+        sourceRepo,
+        sourceBranch,
+        targetRepo,
+        targetBranch,
+        GITHUB_TOKEN,
+        GITHUB_USER
+    }).catch(err => {
         console.error(err);
         console.error(err.stack);
         process.exit(err.code || -1);
