@@ -1,18 +1,27 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Update Image tag'
+description: 'Update Image tag'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
   tagName:
     description: 'tagName'
+    required: true
+  sourceRepo:
+    description: 'sourceRepo'
+    required: true
+  sourceBranch:
+    description: 'sourceBranch'
     required: true
   targetRepo:
     description: 'targetRepo'
     required: true
-  sourceRepo:
-    description: 'sourceRepo'
+  targetBranch:
+    description: 'targetBranch'
+    required: true
+secrets:
+  GITHUB_TOKEN:
+    description: 'GITHUB_TOKEN'
+    required: true
+  GITHUB_USER:
+    description: 'GITHUB_USER'
     required: true
 outputs:
   time: # id of output
