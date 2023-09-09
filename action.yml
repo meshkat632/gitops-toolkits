@@ -16,7 +16,6 @@ inputs:
   targetBranch:
     description: 'targetBranch'
     required: true
-secrets:
   GITHUB_TOKEN:
     description: 'GITHUB_TOKEN'
     required: true
