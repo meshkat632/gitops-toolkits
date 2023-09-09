@@ -34,7 +34,7 @@ mkdir -p "temp-$BUILD_TIME"
 #git status
 #ls -ltr
 
-git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/vvc-portal-ui-chart "temp-$BUILD_TIME/targetRepo"
+git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/ververica/vvc-portal-ui-chart "temp-$BUILD_TIME/targetRepo"
 cd "temp-$BUILD_TIME/targetRepo"
 git status
 ls -ltr
