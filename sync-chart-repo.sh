@@ -38,3 +38,4 @@ git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/verver
 cd "temp-$BUILD_TIME/targetRepo"
 git status
 ls -ltr
+cat argocd/environments/dev/vvc-portal/values.yaml
