@@ -44,6 +44,6 @@ ls -ltr
 #export SOPS_AGE_KEY=$SOPS_AGE_KEY
 ./scripts/sops-utils.sh decryptFile argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
-yq -i e '.vvc-portal.commitSha = "$tagName"' argocd/environments/dev/vvc-portal/values.yaml
+yq -i e ".vvc-portal.commitSha = $tagName" argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
 echo "################################################################################################################"
