@@ -32,10 +32,10 @@ echo "##########################################################################
 mkdir -p "temp-$BUILD_TIME"
 git clone --branch $targetBranch https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
 cd "temp-$BUILD_TIME/targetRepo"
+git status
 ls -ltr
-git diff $targetBranch origin/$sourceBranch --color > diff.txt
-cat diff.txt
-cd ..
+#git diff $targetBranch origin/$sourceBranch --color > diff.txt
+#cat diff.txt
 echo "################################################################################################################"
 #git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
 #cd temp-$BUILD_TIME/targetRepo
