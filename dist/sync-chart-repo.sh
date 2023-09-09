@@ -18,7 +18,7 @@ targetRepo=${args[targetRepo]}
 targetBranch=${args[targetBranch]}
 GITHUB_TOKEN=${args[GITHUB_TOKEN]}
 GITHUB_USER=${args[GITHUB_USER]}
-SOPS_AGE_KEY=${args[SOPS_AGE_KEY]}
+#SOPS_AGE_KEY=${args[SOPS_AGE_KEY]}
 
 
 echo "tagName: $tagName"
@@ -28,7 +28,7 @@ echo "targetRepo: $targetRepo"
 echo "targetBranch: $targetBranch"
 echo "GITHUB_TOKEN: $GITHUB_TOKEN"
 echo "GITHUB_USER: $GITHUB_USER"
-echo "SOPS_AGE_KEY: $SOPS_AGE_KEY"
+#echo "SOPS_AGE_KEY: $SOPS_AGE_KEY"
 
 echo "################################################################################################################"
 mkdir -p "temp-$BUILD_TIME"
@@ -41,7 +41,7 @@ cd "temp-$BUILD_TIME/targetRepo"
 git status
 ls -ltr
 cat argocd/environments/dev/vvc-portal/values.yaml
-export SOPS_AGE_KEY=$SOPS_AGE_KEY
+#export SOPS_AGE_KEY=$SOPS_AGE_KEY
 ./scripts/sops-utils.sh decryptFile argocd/environments/dev/vvc-portal/values.yaml
 cat argocd/environments/dev/vvc-portal/values.yaml
 echo "################################################################################################################"

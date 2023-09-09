@@ -29,7 +29,7 @@ const main = async (args) => {
         "--targetBranch",args.targetBranch,
         "--GITHUB_TOKEN",args.GITHUB_TOKEN,
         "--GITHUB_USER",args.GITHUB_USER,
-        "--SOPS_AGE_KEY",args.SOPS_AGE_KEY,
+      //  "--SOPS_AGE_KEY",args.SOPS_AGE_KEY,
     ]);
 };
 
@@ -42,7 +42,7 @@ try {
     const targetBranch = core.getInput('targetBranch');
     const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
     const GITHUB_USER = core.getInput('GITHUB_USER');
-    const SOPS_AGE_KEY = core.getInput('SOPS_AGE_KEY');
+    //const SOPS_AGE_KEY = core.getInput('SOPS_AGE_KEY');
 
     console.log(`tagName: ${tagName}!`);
     console.log(`sourceRepo: ${sourceRepo}!`);
@@ -51,7 +51,7 @@ try {
     console.log(`targetBranch: ${targetBranch}!`);
     console.log(`GITHUB_TOKEN: ${GITHUB_TOKEN}!`);
     console.log(`GITHUB_USER: ${GITHUB_USER}!`);
-    console.log(`SOPS_AGE_KEY: ${SOPS_AGE_KEY}!`);
+    //console.log(`SOPS_AGE_KEY: ${SOPS_AGE_KEY}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
     // Get the JSON webhook payload for the event that triggered the workflow
@@ -65,7 +65,7 @@ try {
         targetBranch,
         GITHUB_TOKEN,
         GITHUB_USER,
-        SOPS_AGE_KEY
+        //SOPS_AGE_KEY
     }).catch(err => {
         console.error(err);
         console.error(err.stack);
