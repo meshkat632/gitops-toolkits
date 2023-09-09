@@ -30,7 +30,6 @@ echo "GITHUB_USER: $GITHUB_USER"
 
 echo "################################################################################################################"
 mkdir -p "temp-$BUILD_TIME"
-
 git clone --branch $targetBranch https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
 cd "temp-$BUILD_TIME/targetRepo"
 ls -ltr
