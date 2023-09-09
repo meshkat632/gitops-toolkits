@@ -5,6 +5,7 @@ BUILD_TIME := $(shell date '+%Y%m%d%H%M%S')
 build:
 	ncc build index.js --license licenses.txt
 	cp deploy.sh dist
+	cp sync-chart-repo.sh dist
 
 release: build
 	echo "release"
