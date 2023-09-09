@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 //const { exec } = require('node:child_process');
-//const spawn = require('child_process').spawn;
+const spawn = require('child_process').spawn;
 const path = require("path");
 
 

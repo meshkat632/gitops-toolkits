@@ -9647,6 +9647,14 @@ module.exports = require("assert");
 
 /***/ }),
 
+/***/ 2081:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");
+
+/***/ }),
+
 /***/ 6113:
 /***/ ((module) => {
 
@@ -9811,7 +9819,7 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(6024);
 const github = __nccwpck_require__(5016);
 //const { exec } = require('node:child_process');
-//const spawn = require('child_process').spawn;
+const spawn = (__nccwpck_require__(2081).spawn);
 const path = __nccwpck_require__(1017);
 
 
