@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # Read named command line arguments into an args variable
-
 declare -A args
 
 while (( "$#" )); do
@@ -30,11 +28,20 @@ echo "targetBranch: $targetBranch"
 echo "GITHUB_TOKEN: $GITHUB_TOKEN"
 echo "GITHUB_USER: $GITHUB_USER"
 
+echo "################################################################################################################"
 mkdir -p "temp-$BUILD_TIME"
 
-git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/$targetRepo"
-cd temp-$BUILD_TIME/$targetRepo
+git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$sourceRepo "temp-$BUILD_TIME/sourceRepo"
+cd temp-$BUILD_TIME/sourceRepo
 ls -ltr
+
+echo "################################################################################################################"
+
+
+
+#git clone --branch main https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/$targetRepo "temp-$BUILD_TIME/targetRepo"
+#cd temp-$BUILD_TIME/targetRepo
+#ls -ltr
 #git clone --branch master https://github.com/ververica/vvc-portal "temp-$BUILD_TIME/vvc-portal-master"
 
 
